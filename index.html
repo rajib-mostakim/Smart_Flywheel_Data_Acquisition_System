@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flywheel Data Acquisition</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Plotly.js -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Flywheel Data Acquisition</h1>
+        
+        <!-- Attached Mass and Time Input -->
+        <div>
+            <label for="attachedMass">Attached Mass, m2 - (kg):</label>
+            <input type="number" id="attachedMass">
+        </div>
+        <div>
+            <label for="time">Time, t - (sec):</label>
+            <input type="number" id="time">
+        </div>
+
+        <!-- Diameter of the Shaft and Height Input -->
+        <div>
+            <label for="diameter">Diameter of the Shaft, d - (m):</label>
+            <input type="number" id="diameter">
+            <button onclick="resetDiameter()">Reset</button>
+        </div>
+        <div>
+            <label for="height">Height, h - (m):</label>
+            <input type="number" id="height">
+            <button onclick="resetHeight()">Reset</button>
+        </div>
+
+        <!-- Holder Mass Input with Reset Button -->
+        <div>
+            <label for="holderMass">Holder Mass, m1 - (kg):</label>
+            <input type="number" id="holderMass">
+            <button onclick="resetHolderMass()">Reset</button>
+        </div>
+        <!-- Flywheel Mass Input with Reset Button -->
+        <div>
+            <label for="flywheelMass">Flywheel Mass, M - (kg):</label>
+            <input type="number" id="flywheelMass">
+            <button onclick="resetflywheelMass()">Reset</button>
+        </div>
+
+        <!-- Add Data and Generate Graph Buttons -->
+        <button onclick="addData()">Add Data</button>
+        <button onclick="generateGraph()">Generate Graph</button>
+
+        <!-- Save Graph as PDF Button -->
+        <button onclick="saveGraphAsPDF()">Save Graph as PDF</button>
+
+        <!-- Datasheet Option -->
+        <button onclick="generateDatasheet()">Generate Datasheet</button>
+
+        <!-- Graph Container -->
+        <div id="graph"></div>
+
+        <!-- Equation Display -->
+        <div id="equation"></div>
+        <div id="inertia"></div>
+        <div id="gyration"></div>
+        <div id="friction"></div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
